@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Fake News Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="https://img.icons8.com/ios-filled/40/22c55e/news.png" alt="FakeNewsAI Logo" style="vertical-align:middle;margin-right:10px;">FakeNews<span>AI</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/detect">Detect</a></li>
+                <li><a href="/about" class="active">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <h1>About FakeNewsAI</h1>
+                <p class="about-mission">
+                    FakeNewsAI is an advanced AI-powered platform that helps you instantly verify the authenticity of news articles and headlines. Our mission is to empower you to make informed decisions and stay protected from misinformation.
+                </p>
+                <div class="about-features-grid">
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">🤖</div>
+                        <h3>AI-Powered Detection</h3>
+                        <p>State-of-the-art machine learning analyzes news content for authenticity in seconds.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">🔒</div>
+                        <h3>Privacy & Security</h3>
+                        <p>Your news is processed securely and never stored. 100% privacy guaranteed.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">⚡</div>
+                        <h3>Real-time Results</h3>
+                        <p>Get instant feedback on news articles and headlines, anytime, anywhere.</p>
+                    </div>
+                </div>
+                <h2>How It Works</h2>
+                <p>
+                    Our platform uses natural language processing and machine learning to analyze news content, providing you with a simple, reliable authenticity score. Just paste your news article or headline, and get results in seconds.
+                </p>
+                <h2>Security & Privacy</h2>
+                <p>
+                    We use industry-leading security protocols. Your data is never stored, and all processing is done securely and privately.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>© 2025 FakeNewsAI. All Rights Reserved.</span>
+        </div>
+    </footer>
+</body>
+</html> 

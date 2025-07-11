@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector | Detect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">FakeNews<span>AI</span></div>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/detect" class="active">Detect</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="detect-section">
+            <div class="detect-card">
+                <h1>Check News Authenticity</h1>
+                <form action="/predict" method="post" class="detection-form">
+                    <label>News Headline:</label>
+                    <input type="text" name="headline" placeholder="Enter News Headline..." required>
+                    <label>Full News Content:</label>
+                    <textarea name="news" placeholder="Paste full news article here..." rows="8" required></textarea>
+                    <div class="checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms"> I agree to the Terms & Conditions</label>
+                    </div>
+                    <button type="submit">Check News</button>
+                </form>
+                {% if prediction_text %}
+                <div class="result-card">
+                    <h2>{{ prediction_text }}</h2>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>© 2025 FakeNewsAI. All Rights Reserved.</span>
+        </div>
+    </footer>
+</body>
+</html>
